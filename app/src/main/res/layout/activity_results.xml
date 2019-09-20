@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/home"
+    tools:context=".ResultsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Over"
+            android:textSize="50sp"
+            android:textColor="#ff0000"
+            android:textStyle="bold"
+            android:layout_marginBottom="-60dp"/>
+
+        <com.skydoves.medal.MedalLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:direction="right"
+            app:speed="5000"
+            app:turn="1">
+
+            <ImageView
+                android:id="@+id/medal"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="100dp"/>
+
+        </com.skydoves.medal.MedalLayout>
+
+        <TextView
+            android:id="@+id/Results_scoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/Results_topScoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:layout_marginTop="20dp"
+            />
+
+        <!--<TextView-->
+            <!--android:id="@+id/Results_gamePlayedLabel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Game Played"-->
+            <!--android:textSize="30dp"-->
+            <!--android:textColor="#ff0000"-->
+            <!--android:layout_marginTop="20dp"/>-->
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="tryAgain"
+            android:background="@drawable/replay"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="backToHome"
+            android:background="@drawable/back"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
